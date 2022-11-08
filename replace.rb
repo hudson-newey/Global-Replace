@@ -47,4 +47,12 @@ def writeToFile(fileName, value)
 end
 
 # call main function
-main(ARGV[0].to_s, ARGV[1].to_s)
+
+@callingArguments = ARGV
+if @callingArguments.length() < 1
+    puts "[ERROR] Invalid usage"
+    puts "Propper Usage: $ ruby ./replace.rb [find string] [replacement string]"
+    puts "\nBy default, [replacement string] = empty string"
+else
+    main(ARGV[0].to_s, ARGV[1].to_s)
+end
