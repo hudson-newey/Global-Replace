@@ -1,4 +1,4 @@
-$PROGRAM_NAME = "./replace.rb"
+$PROGRAM_NAME = $PROGRAM_NAME
 
 def main(inputString, outputString)
     @allFiles = Dir.glob("./**/*").reject { |f| File.directory?(f) }
